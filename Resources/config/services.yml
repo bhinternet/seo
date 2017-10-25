@@ -1,0 +1,4 @@
+services:
+#    bh_seo.example:
+#        class: BH\SeoBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

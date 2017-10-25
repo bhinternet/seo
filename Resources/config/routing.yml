@@ -1,0 +1,16 @@
+admin_seo:
+    path:     /
+    defaults: { _controller: BHSeoBundle:Seo:readAll }
+admin_seo_add:
+    path:     /add
+    defaults: { _controller: BHSeoBundle:Seo:add }
+admin_seo_edit:
+    path:     /edit/{seo}
+    defaults: { _controller: BHSeoBundle:Seo:edit }
+    requirements:
+        training: \d+
+admin_seo_delete:
+    path:     /delete/{seo}
+    defaults: { _controller: BHSeoBundle:Seo:delete }
+    requirements:
+        training: \d+

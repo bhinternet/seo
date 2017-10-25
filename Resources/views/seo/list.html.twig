@@ -1,0 +1,30 @@
+<table id="seo_table" class="table table-striped">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>URL</th>
+        <th>Route</th>
+        <th>Titre</th>
+        <th>Description</th>
+        <th>Date d'ajout</th>
+        <th>Date de modification</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for seo in seos %}
+        <tr>
+            <td>{{ seo.id }}</td>
+            <td>{{ seo.url }}</td>
+            <td>{% if seo.route %}{{ seo.route }}{% endif %}</td>
+            <td>{{ seo.title }}</td>
+            <td>{{ seo.description }}</td>
+            <td>{{ seo.createdAt|date('d/m/Y H:i') }}</td>
+            <td>{% if seo.updatedAt %}{{ seo.updatedAt|date('d/m/Y H:i') }}{% endif %}</td>
+            <td>
+                <a href="{{ path('admin_seo_edit', {'seo':seo.id}) }}">Éditer</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

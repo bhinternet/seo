@@ -1,0 +1,6 @@
+{% extends "BHSeoBundle::layout.html.twig" %}
+
+{% block bh_seo_content %}
+    <h1>Ajouter <small><a href="{{ path('admin_seo') }}">Retour</a></small></h1>
+    {{ include('@BHSeo/seo/form.html.twig') }}
+{% endblock %}
