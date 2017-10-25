@@ -41,9 +41,6 @@ Ce Back Office n'est accessible que pour un utilisateur ayant un ROLE_SEO.
 
     # ...
 
-### Modifier le title et la description par défaut dans la template seo.html.twig
-    {# src/BH/SeoBundle/Resources/views/seo/seo.html.twig #}
-
 
 ### Ajouter le render(controller) dans le  <head> du layout de base
 
@@ -54,7 +51,7 @@ Ce Back Office n'est accessible que pour un utilisateur ayant un ROLE_SEO.
         ...
         {{  render(controller('BHSeoBundle:Seo:getSeo', { 'url': app.request.pathInfo } )) }}
         ...
-### SeoBundle nécessite Jquery, bootstrap et datatable : Ajouter dans layout de base
+### SeoBundle nécessite Jquery, bootstrap et datatables : Ajouter dans base ou autre layout 
 
     {# app/Resources/views/base.html.twig #}
     <!DOCTYPE html>
@@ -96,3 +93,12 @@ Ce Back Office n'est accessible que pour un utilisateur ayant un ROLE_SEO.
   ### Ajouter le ROLE_SEO à l'admin seo
   
     php bin/console fos:user:promote
+    
+   ### Pour intégrer les vues à votre projet surcharger comme FosUserBundle
+  
+    Créer un dossier BHSeoBundle dans app/Resources
+    Y copier les vues views/seo/*
+    Changer le layout par celui qui convient
+    Et placer les block bh_seo_content dans des block body
+    
+  

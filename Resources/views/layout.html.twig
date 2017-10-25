@@ -1,6 +1,10 @@
-{% extends '::base.html.twig' %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+</head>
+<body>
 
-{% block content %}
     {% if app.request.hasPreviousSession %}
         {% for type, messages in app.session.flashbag.all() %}
             {% for message in messages %}
@@ -12,16 +16,13 @@
     {% endif %}
 
     {% block stylesheets %}
-        {{ parent() }}
+
     {% endblock %}
     {% block javascripts %}
-        {{ parent() }}
+
     {% endblock %}
-        <div class="container">
         {% block bh_seo_content %}
         {% endblock %}
-        </div>
+</body>
+</html>
 
-    {#{% block fos_user_content %}#}
-    {#{% endblock fos_user_content %}#}
-{% endblock %}

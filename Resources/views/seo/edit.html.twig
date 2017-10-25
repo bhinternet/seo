@@ -1,6 +1,7 @@
 {% extends "BHSeoBundle::layout.html.twig" %}
 
 {% block bh_seo_content %}
+<div class="container">
     <h1>Éditer <small><a href="{{ path('admin_seo') }}">Retour</a></small></h1>
     {{ include('@BHSeo/seo/form.html.twig') }}
     <hr>
@@ -23,5 +24,8 @@
             </div>
         </div>
     </div>
+
+</div>
+
 {% endblock %}
 

@@ -1,9 +1,11 @@
 {% extends "BHSeoBundle::layout.html.twig" %}
 
-{% block bh_seo_content %}
-    <h1>SEO & URL <small><a href="{{ path('admin_seo_add') }}">Ajouter</a></small></h1>
-    {{ include('@BHSeo/seo/list.html.twig') }}
-{% endblock %}
+    {% block bh_seo_content %}
+        <div class="container">
+            <h1>SEO & URL <small><a href="{{ path('admin_seo_add') }}">Ajouter</a></small></h1>
+            {{ include('@BHSeo/seo/list.html.twig') }}
+        </div>
+    {% endblock %}
 {% block javascripts %}
     {{ parent() }}
     <script>
