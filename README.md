@@ -11,7 +11,7 @@ Ce Back Office n'est accessible que pour un utilisateur ayant un ROLE_SEO.
 
 ## Installation
 
-### Ajouter la dépendance de BHUserBundle au projet
+### Ajouter la dépendance de BHSeoBundle au projet
     // composer.json
     {
         "require": {
