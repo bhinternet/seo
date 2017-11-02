@@ -11,6 +11,21 @@ Ce Back Office n'est accessible que pour un utilisateur ayant un ROLE_SEO.
 
 ## Installation
 
+### Ajouter la dépendance de BHUserBundle au projet
+    // composer.json
+    {
+        "require": {
+            // ...
+            "BH/SeoBundle" : "dev-master"
+        },
+        "repositories" : [{
+            "type" : "vcs",
+            "url" : "https://vanessa77@bitbucket.org/vanessa77/bhseobundle.git"
+        }]
+    }
+### Mettre à jour les dépendances
+    php composer.phar update
+
 ### Activer BHSeoBundle dans le Kernel
 
     // app/AppKernel.php
