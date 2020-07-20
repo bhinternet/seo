@@ -79,8 +79,8 @@ class SeoController extends Controller {
      * @Security("is_granted('ROLE_SEO')")
      */
     public function deleteAction(Seo $seo) {
-        $seo->delete();
         $em = $this->getDoctrine()->getManager();
+        $em->remove($seo);
         $em->flush();
 
         $this->addFlash('success', 'L\'URL a bien été supprimée');
